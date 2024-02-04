@@ -1,0 +1,211 @@
+body {
+  margin: 0;
+  overflow-x: hidden;
+  background-color: #100e17;
+  font-family: 'Open Sans', sans-serif;
+}
+/*header*/
+header{
+  height: 100vh;
+  width: 100vw;
+  position: relative;
+  z-index: 1;
+}
+
+h1 img{
+  width: 70px;
+}
+header nav {
+	padding: 3px 5% 0px 5%;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-items: center;
+}
+
+header nav .right {
+	display: flex;
+	align-items: center;
+}
+header nav .right p {
+	margin: 0 15px 0 0;
+	color: #ccc;
+}
+header nav .right p:hover {
+	color: white;
+	cursor: pointer;
+}
+
+.videoheader video{
+    position: absolute;
+    top: 100px;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+}
+
+#overlay p {
+  font-size: 20px;
+  padding: 15%;
+  padding-bottom: 75%;
+
+}
+p {
+  padding: 50px;
+}
+.parent{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.container {
+  padding: 10%;
+  height: 100vh;
+  width: 100vw;
+  top: 60px;
+  left: 1px;
+  display: flex;
+}
+
+.card {
+  backdrop-filter: opacity(100%);
+  display: flex;
+  height: 480px;
+  width: 200px;
+  margin-right: 10%;
+background-size: cover;
+background-position: 35%;
+  border-radius: 10px;
+  box-shadow: -1rem 0 3rem #000;
+/*   margin-left: -50px; */
+  transition: 0.4s ease-out;
+  position: relative;
+  left: 0px;
+}
+
+.card:not(:first-child) {
+    margin-left: -50px;
+}
+
+.card:hover {
+  z-index: 1;
+  box-shadow: 2px 12px 2px 1px rgba(105, 105, 122, 0.2);;
+  background:linear-gradient(rgba(241, 21, 215, 0.2), );
+  transform: scale(1.05);
+  transform: translateY(-20px);
+  transition: 0.4s ease-out;
+}
+
+.card:hover ~ .card {
+  filter: none;
+  position: relative;
+  left: 50px;
+  transition: 0.4s ease-out;
+}
+
+.title {
+  color: white;
+  font-weight: 300;
+  position: absolute;
+  left: 20px;
+  top: 15px;
+}
+
+.bar {
+  position: absolute;
+  top: 100px;
+  left: 20px;
+  height: 5px;
+  width: 150px;
+}
+
+.emptybar {
+  background-color: #2e3033;
+  width: 100%;
+  height: 100%;
+}
+.card .logo-img{
+display: flex;
+align-items: end;
+margin: 0%;
+filter: none;
+}
+.card .logo-img:hover{
+  z-index: 2;
+  filter: brightness(1.75);
+  filter: none;
+}
+.filledbar {
+  position: absolute;
+  top: 0px;
+  z-index: 3;
+  width: 0px;
+  height: 100%;
+  background: rgb(0,154,217);
+  background: linear-gradient(90deg, rgba(0,154,217,1) 0%, rgba(217,147,0,1) 65%, rgba(255,186,0,1) 100%);
+  transition: 0.6s ease-out;
+}
+
+.card:hover .filledbar {
+  width: 120px;
+  transition: 0.4s ease-out;
+}
+
+
+.stroke {
+  stroke: white;
+  stroke-dasharray: 360;
+  stroke-dashoffset: 360;
+  transition: 0.6s ease-out;
+}
+
+svg {
+  fill: #17141d;
+  stroke-width: 2px;
+}
+
+.card:hover .stroke {
+  stroke-dashoffset: 100;
+  transition: 0.6s ease-out;
+}
+.card-1{
+  background-image: url(img/fifa.jpg);
+}
+.card-2{
+  background-image: url(img/pubg.jpg);
+  background-position: 50%;
+  
+}
+.card-3{
+  background-image: url(img/lol.jpg);
+  background-position: 30%;
+}
+.card-4{
+  background-image: url(img/halo.jpg);
+  background-position: 50%;
+  z-index: 1;
+
+}
+
+.card .container-text p{
+display: none;
+}
+footer {
+	margin: 0;
+	padding: 20px;
+	background-color: black;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+}
+footer h3 {
+	color: var(--violet);
+}
+footer p {
+	cursor: pointer;
+	color: #ccc;
+}
+footer p:hover {
+	color: white;
+}
